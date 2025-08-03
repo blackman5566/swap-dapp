@@ -1,4 +1,4 @@
-# 🦄 Swap DApp Frontend (with L1 ↔ L2 Support)
+# 🦄 Swap DApp Frontend (with L1 ↔ L2 Support) [[Demo Video](https://www.youtube.com/watch?v=UL8BmhMOH6w)]
 
 This is the Web3 integration interface I started on July 15, 2025 and delivered in roughly two weeks: directly connected to my own AMM smart contracts (see https://github.com/blackman5566/swap-contracts), supporting multi-hop swaps, liquidity operations, and native asset bridging between Ethereum Sepolia (L1) and Arbitrum Sepolia (L2). The full system—from wallet flow, fast nonce-based signed login with replay protection, contract interaction, to cross-chain bridging—was independently designed and implemented by me.
 
