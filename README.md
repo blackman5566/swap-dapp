@@ -54,7 +54,9 @@ NEXT_PUBLIC_ETHERSCAN_API_KEY=your_etherscan_api_key_here  # use a rotatable/tes
 - Always validate wallet `chainId` before cross-chain operations to prevent sending assets to the wrong layer.
 
 ## Authentication / Wallet Login Flow
-Login uses a frontend-generated random nonce as a challenge; the user signs it with their wallet to prevent replay attacks. There is no persistent backend session—this is for demo/testing only, not a production identity solution.
+This repo demonstrates a minimal SIWE flow for demo/testing only.
+In this demo, the nonce is generated on the client to keep the code simple.
+Do not use this in production. In a real system, the server must generate a cryptographically secure nonce, bind it to a server-side/HttpOnly session, verify the signature plus domain/chainId, invalidate the nonce after use, and issue a session cookie or JWT.
 
 ## Author
 This is an end-to-end implementation I independently built, from frontend to smart contracts (https://github.com/blackman5566/swap-contracts) and cross-chain logic. I delivered AMM multi-hop swapping, L1/L2 bridging, wallet flow, and replay-safe authentication in a very short time, solving real multi-chain asset flow and exchange challenges. MIT License.
